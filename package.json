@@ -1,0 +1,30 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "MERN Practice --Soccer backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Olaitan Habeeb",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olaitan6201/MERN_Soccer_backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/olaitan6201/MERN_Soccer_backend/issues"
+  },
+  "homepage": "https://github.com/olaitan6201/MERN_Soccer_backend#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "mongoose": "^6.8.4",
+    "nodemon": "^2.0.20"
+  }
+}
