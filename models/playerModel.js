@@ -17,7 +17,7 @@ export const PlayerSchema = new Schema({
     },
     phone: Number,
     isCoach: {
-        type: Bolean,
+        type: Boolean,
         default: false
     },
     team: String,

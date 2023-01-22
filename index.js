@@ -1,6 +1,7 @@
 import express from 'express'
 import mongoose from 'mongoose'
 import bodyParser from 'body-parser'
+import routes from './routes/soccerRoutes'
 
 const app = express()
 const PORT = 3000
@@ -11,10 +12,16 @@ mongoose.connect('mongodb+srv://developer_habeeb:4AGuuAKvJBvPZ@cluster0.hlc4c.mo
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
+    .then(() => console.log('Connected to database'))
+    .catch((err) => console.log(`Connection failed: ${err}`))
+
+mongoose.set('strictQuery', false)
 
 // body-parser setup
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
+
+routes(app)
 
 app.get('/', (req, res) => {
     res.send(`Node started on PORT: ${PORT}!`)
